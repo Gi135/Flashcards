@@ -1,0 +1,10 @@
+let flashcards = document.querySelectorAll('.flashcard');
+let currentCardIndex = 0;
+
+document.getElementById('next-button').addEventListener('click', () => {
+    flashcards[currentCardIndex].classList.toggle('flipped');
+    currentCardIndex = (currentCardIndex + 1) % flashcards.length;
+    flashcards[currentCardIndex].classList.toggle('flipped');
+});
+
+// Adiciona a classe "flipped" ao flashcard, alternando entre frente e verso
